@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>付款申请单</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!--
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	-->
+</head>
+<body>
+<h1 align="center" style="margin: 10vh 0">付款申请单信息填写</h1>
+<form class="form-horizontal" role="form" action="formresult.php" method="post" name="form1"  onsubmit="return myCheck()" style="margin-left:16vw ">
+	<div class="form-group">
+		<label for="company" class="col-lg-2 control-label">公司名称</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="company"
+				   placeholder="请输入公司名称" name="company" value="XXXXXXXXXXXXX有限公司">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="time" class="col-lg-2 control-label">申请时间</label>
+		<div class="col-lg-6">
+			<input type="date" class="form-control" id="time"
+				   placeholder="请输入申请时间" name="time">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="department" class="col-lg-2 control-label">部门</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="department"
+				   placeholder="请输入部门名称" name="department">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="proposer" class="col-lg-2 control-label">申请人</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="proposer"
+				   placeholder="请输入申请人姓名" name="proposer">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="paytime" class="col-lg-2 control-label">付款时间</label>
+		<div class="col-lg-6">
+			<input type="date" class="form-control" id="paytime"
+				   placeholder="请输入付款时间" name="paytime">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="payway" class="col-lg-2 control-label">支付方式</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="payway"
+				   placeholder="请输入支付方式" name="payway">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="appcontent" class="col-lg-2 control-label">申请内容</label>
+		<div class="col-lg-6">
+			<textarea class="form-control" id="appcontent"
+				   placeholder="请输入申请内容" name="appcontent" rows="5"></textarea>
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="count" class="col-sm-2 control-label">金额</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="count"
+				   placeholder="单位： 元  格式：xxxxx.xx   范围：0~99999" name="count">
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="cap" class="col-sm-2 control-label">金额(大写)</label>
+		<div class="col-lg-6">
+			<input class="form-control" name="shiwan" value="⊗" readonly="readonly">
+		    </select><br>
+			<select class="form-control" name="wan">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：万</option>
+
+		    </select><br>
+		    <select class="form-control" name="qian">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：仟</option>
+
+		    </select><br>
+		    <select class="form-control" name="bai">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：佰</option>
+
+		    </select><br>
+		    <select class="form-control" name="shi">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：拾</option>
+
+		    </select><br>
+		    <select class="form-control" name="yuan">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：元</option>
+
+		    </select><br>
+		    <select class="form-control" name="jiao">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：角</option>
+
+		    </select><br>
+		    <select class="form-control" name="fen">
+				   <option> ⊗</option>
+				   <option>零</option>
+				   <option>壹</option>
+				   <option>贰</option>
+				   <option>叁</option>
+				   <option>肆</option>
+				   <option>伍</option>
+				   <option>陆</option>
+				   <option>柒</option>
+				   <option>捌</option>
+				   <option>玖</option>
+				   <option selected="selected">请填写大写数字零到玖，若无则填 ⊗  ； 单位：分</option>
+
+		    </select><br>
+
+        </div>
+	</div>
+	<div class="form-group">
+		<label for="organname" class="col-lg-2 control-label">收款单位名称</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="organname"
+				   placeholder="请输入收款单位名称" name="organname">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="accountbank" class="col-lg-2 control-label">开户行</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="accountbank"
+				   placeholder="请输入开户行" name="accountbank">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="account" class="col-lg-2 control-label">账号</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="account"
+				   placeholder="请输入账号" name="account">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="linkman" class="col-lg-2 control-label">联系人</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="linkman"
+				   placeholder="请输入联系人" name="linkman">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="phone" class="col-lg-2 control-label">联系电话</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="phone"
+				   placeholder="请输入联系电话" name="phone">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="address" class="col-lg-2 control-label">地区</label>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" id="address"
+				   placeholder="请输入地区" name="address">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">生成申请单</button>
+		</div>
+	</div>
+</form>
+<script type="text/javascript">
+            function myCheck()
+            {
+               for(var i=0;i<document.form1.elements.length-1;i++)
+               {
+                  if(document.form1.elements[i].value=="")
+                  {
+                     alert("当前表单未填写完整");
+                     document.form1.elements[i].focus();
+                     return false;
+                  }
+               }
+               return true;
+
+            } ;
+
+            var text = document.getElementById("count");
+            text.onkeyup = function(){
+            if(text.value>99999){
+            text.value = 99999;
+              };
+
+            text.onafterpaste=function(){
+            	if(text.value>99999){
+            text.value = 99999;
+              };
+            };
+}
+</script>
+</body>
+</html>
